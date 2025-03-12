@@ -16,7 +16,7 @@
 // Fonction pour afficher un caractère à l'écran
 void ft_putchar(char c)
 {
-	write(1, &c, 1);  // Écrit le caractère
+	write(1, &c, 1);
 }
 
 // Fonction pour afficher une chaîne de caractères
@@ -36,12 +36,12 @@ void ft_putnbr(int nb)
 {
 	long nbr;
 
-	nbr = nb;  // Utilisation de 'long' pour gérer les grands nombres et éviter un dépassement de capacité
+	nbr = nb;
 	if (nbr < 10) // Si le nombre est inférieur à 10 (cas de base), on l'affiche directement
 	{
 		ft_putchar(nbr + '0');  // Convertit le chiffre en caractère (par exemple 5 devient '5') et l'affiche
 	}
-	else // Si le nombre est plus grand que 9, on divise récursivement
+	else 
 	{
 		ft_putnbr(nbr / 10);   // Affiche la partie entière du nombre (les chiffres les plus à gauche)
 		ft_putnbr(nbr % 10);   // Affiche le reste (les chiffres les plus à droite)
