@@ -37,14 +37,14 @@ void ft_putnbr(int nb)
 	long nbr;
 
 	nbr = nb;
-	if (nbr < 10) // Si le nombre est inférieur à 10 (cas de base), on l'affiche directement
+	if (nbr < 10)
 	{
-		ft_putchar(nbr + '0');  // Convertit le chiffre en caractère (par exemple 5 devient '5') et l'affiche
+		ft_putchar(nbr + '0');
 	}
 	else 
 	{
-		ft_putnbr(nbr / 10);   // Affiche la partie entière du nombre (les chiffres les plus à gauche)
-		ft_putnbr(nbr % 10);   // Affiche le reste (les chiffres les plus à droite)
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
 }
 
@@ -53,19 +53,19 @@ int ft_atoi(char *str, int *res)
 {
 	int i = 0;
 
-	while (str[i]) // Vérifie que tous les caractères sont des chiffres
+	while (str[i])
 	{
-		if (str[i] < '0' || str[i] > '9')  // Si le caractère n'est pas un chiffre
-			return (0);  // Retourne 0 pour signaler qu'il y a une erreur (non numérique)
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
 		i++;
 	}
-	*res = 0;  // Initialise la variable de résultat à zéro
-	i = 0;     // Réinitialise l'indice pour parcourir à nouveau la chaîne
-	while (str[i] >= '0' && str[i] <= '9')  // Tant qu'on trouve des chiffres
+	*res = 0;
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		*res *= 10;  // Décale le résultat d'un chiffre vers la gauche (multiplie par 10)
-		*res += str[i] - '0';  // Ajoute le chiffre actuel à la fin du nombre
-		i++;  // Passe au caractère suivant
+		*res *= 10;
+		*res += str[i] - '0';
+		i++;
 	}
-	return (1);  // Retourne 1 pour signaler que la conversion a réussi
+	return (1);
 }
