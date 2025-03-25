@@ -25,6 +25,9 @@ $(CLIENT) : client.c
 $(SERVER) : server.c
 		$(CC) $(CFLAGS) server.c utils.c -o server
 
+clean:	
+		rm -f  $(CLIENT) $(SERVER)
+
 fclean:
 	rm -rf $(CLIENT) $(SERVER)
 
