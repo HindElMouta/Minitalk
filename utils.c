@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#include "minitalk.h"
 
 // Fonction pour afficher un caractère à l'écran
 void ft_putchar(char c)

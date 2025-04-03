@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <signal.h>
-#include <unistd.h>
+#include "minitalk.h"
 
 pid_t	getpid(void);
 void	ft_putchar(char c);

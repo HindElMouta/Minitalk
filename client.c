@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <signal.h>
+#include "minitalk.h"
 
 int		ft_atoi(char *str, int *res);
 void	ft_putchar(char c);
