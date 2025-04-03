@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hinel-mo <hinel-mo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:43:18 by hinel-mo          #+#    #+#             */
-/*   Updated: 2025/02/11 14:43:18 by hinel-mo         ###   ########.fr       */
+/*   Updated: 2025/04/03 16:22:47 by hinel-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ pid_t	getpid(void);
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);
 
-pid_t g_clientpid = -1;
+pid_t	g_clientpid = -1;
 
 void	rec(int n, int pid)
 {
@@ -47,7 +47,7 @@ void	rec(int n, int pid)
 
 void	server(void)
 {
-	int pid;
+	int	pid;
 
 	pid = getpid();
 	ft_putnbr(pid);
@@ -65,7 +65,7 @@ void	sig_handler(int sig, siginfo_t *info, void *ptr)
 
 int	main(void)
 {
-	struct sigaction act;
+	struct sigaction	act;
 
 	act.sa_flags = SA_SIGINFO;
 	act.sa_sigaction = sig_handler;

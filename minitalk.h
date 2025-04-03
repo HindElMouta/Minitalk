@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hinel-mo <hinel-mo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 16:16:54 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/03 16:16:54 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/03 16:26:57 by hinel-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <signal.h>
 # include <unistd.h>
 
-extern pid_t g_clientpid;
+extern pid_t	g_clientpid;
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
